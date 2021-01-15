@@ -1,6 +1,11 @@
 const mongoose = require('mongoose')
 const config = require('config')
-const db = config.get('mongoURI')
+
+
+
+//dotenv
+require('dotenv').config()
+const db = process.env.MONGO_URI
 
 const connectDB = async () => {
 
@@ -16,7 +21,7 @@ const connectDB = async () => {
         console.log('Database Connected')
     } catch (err) {
 
-        cconsole.error(err.message)
+        console.error(err.message)
         process.exit(1)
     }
 }

@@ -8,6 +8,8 @@ app.get('/', (req, res) => res.send('Hello World '))
 //Connect Database
 connectDB()
 
+
+
 //Init Middleware
 app.use(express.json({ extended: false }))
 
